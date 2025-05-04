@@ -1,3 +1,8 @@
+@font-face {
+  font-family: 'Karla';
+  src: url('karla.woff2') format('woff2');
+}
+
 body {
   color: #768390;
   background: #FFF;
