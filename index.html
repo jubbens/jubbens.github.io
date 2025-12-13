@@ -33,7 +33,7 @@
 							<p>I am currently a Research Officer (Computational Biology) at the <a href="https://nrc.canada.ca/en">National Research Council Canada</a>. As a member of the <a href="https://nrc.canada.ca/en/research-development/research-collaboration/research-centres/aquatic-crop-resource-development-research-centre">Aquatic and Crop Resource Development (ACRD)</a> research centre, my research interests involve a broad range of machine learning methods for improving crop plants. This includes applications in bioinformatics, as well as genomic prediction, efficient cross selection, and other predictive breeding technologies. At NRC, I am involved with both basic research as well as contract work for small and medium Canadian enterprises.</p>
 
 							<p class="pub-header"><span data-target="#pubs-nrc" data-toggle="collapse" href="#">Publications and Presentations &#9662;</span></p>
-							<div class="collapse" id="pubs-nrc">
+							<div class="collapser collapsed" id="pubs-nrc">
 								<p class="pub"><span class="bold">Ubbens, J. R.</span> (2025). Neural Scaling Laws for AI in Plant Breeding. Invited keynote presented at Brassica 2025, Giessen, Germany. September 2025.</p>
 								<p class="pub"><span class="bold">Ubbens, J. R.</span>, Stavness, I., Pound, M.P., &amp; Guo, W. (2025). Deep Learning in Plant Phenotyping: the First Ten Years. Plant Phenomics, 100062. <a href="https://doi.org/10.1016/j.plaphe.2025.100062">doi:10.1016/j.plaphe.2025.100062</a></p>
 							    <p class="pub"><span class="bold">Ubbens, J. R.</span> (2024). Genomic prior-data fitted networks: a new approach for genomic prediction. Invited talk presented at the National Association of Plant Breeders. January 2024.</p>
@@ -52,7 +52,7 @@
 							<p>Previously, I was a Research Associate at the <a href="https://www.gifs.ca">Global Institute for Food Security</a> in the Plant Improvement group. My research at GIFS focused primarily on novel machine learning methods in quantitative genetics.</p>
 
 							<p class="pub-header"><span data-target="#pubs-gifs" data-toggle="collapse" href="#">Publications and Presentations &#9662;</span></p>
-							<div class="collapse" id="pubs-gifs">
+							<div class="collapser collapsed" id="pubs-gifs">
 							    <p class="pub"><span class="bold">Ubbens, J. R.</span>, Stavness, I. &amp; Sharpe, A. G. (2025). GPFN: Prior-Data Fitted Networks for Genomic Prediction. in IEEE Transactions on Computational Biology and Bioinformatics. <a href="https://ieeexplore.ieee.org/abstract/document/11119438">doi:10.1109/TCBBIO.2025.3596744</a></p>
 							    <p class="pub"><span class="bold">Ubbens, J. R.</span>, Stavness, I. &amp; Sharpe, A. G. (2023). The Instrinsic Dimensionality of Genotype Data and its Implications. PAG 30 (poster). San Diego, CA. February 2023.</p>
 							    <p class="pub"><span class="bold">Ubbens, J. R.</span>, Feldmann, M. J., Stavness, I. &amp; Sharpe, A. G. (2022). Quantitative evaluation of nonlinear methods for population structure visualization and inference. G3 Genes|Genomes|Genetics, Volume 12, Issue 9, September 2022, jkac191, <a href="https://doi.org/10.1093/g3journal/jkac191">doi:10.1093/g3journal/jkac191</a></p>
@@ -73,7 +73,7 @@
 
 							<p class="pub-header"><span data-target="#pubs-phd" data-toggle="collapse" href="#">Publications and Presentations &#9662;</span></p>
 
-							<div class="collapse" id="pubs-phd">
+							<div class="collapser collapsed" id="pubs-phd">
 								<p class="pub"><span class="bold">Ubbens, J. R.</span>, Ayalew, T. W., Shirtliffe, S. J., Josuttes, A., Pozniak, C. J. &amp; Stavness, I. (2020). AutoCount: Unsupervised Segmentation and Counting of Plant Organs in Field Images. European Conference on Computer Vision (ECCV) Workshops, 2020. August 2020.</p>
 								
 								<p class="pub">Ayalew, T. W., <span class="bold">Ubbens, J. R.</span> &amp; Stavness, I. (2020). Unsupervised Domain Adaptation for Counting Plant Organs. European Conference on Computer Vision (ECCV) Workshops, 2020. August 2020.</p>
@@ -98,7 +98,28 @@
 			</div>
 		</div>
 	</div>
-	<script src="jquery-2.2.4.min.js" defer></script>
-	<script src="bootstrap.min.js" defer></script>
+	<script>
+	// Handles the collapsible publication sections
+	document.addEventListener('DOMContentLoaded', function() {
+		const collapseToggles = document.querySelectorAll('[data-toggle="collapse"]');
+
+		collapseToggles.forEach(toggle => {
+			toggle.addEventListener('click', function(e) {
+				e.preventDefault();
+
+				let targetSelector = this.getAttribute('data-target') || this.getAttribute('href');
+
+				if (!targetSelector || targetSelector === '#') return;
+		  
+				const targetElement = document.querySelector(targetSelector);
+
+				if (targetElement) {
+					targetElement.classList.toggle('expanded');
+					targetElement.classList.toggle('collapsed');
+				}
+			});
+		});
+	});
+	</script>
 </body>
 </html>
