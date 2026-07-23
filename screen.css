@@ -307,3 +307,9 @@ a:hover {
 .marker-outline .timeline-item:hover .timeline-marker:before {
   background: #FF6B6B;
 }
+
+.collapse {
+  display: block !important;
+  overflow: hidden;
+  transition: height 0.35s ease;
+}
