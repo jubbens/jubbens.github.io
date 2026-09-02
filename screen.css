@@ -154,7 +154,7 @@ section {
   color: var(--ink-faint);
   line-height: 1.4;
 }
-.exp-body h3 {
+.exp-body h2 {
   font-family: var(--serif);
   font-size: 1.45rem;
   font-weight: 600;
