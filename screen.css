@@ -47,6 +47,7 @@ a:hover {
 }
 a:not(.chip) > .arr {
   text-decoration: none;
+  font-family: var(--mono);
   margin-left: .15em;
   font-size: .6em;
   line-height: 0;
