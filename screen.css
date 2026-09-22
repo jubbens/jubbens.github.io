@@ -48,15 +48,10 @@ a:hover {
 a:not(.chip) > .arr {
   text-decoration: none;
   font-family: var(--mono);
-  margin-left: .15em;
   font-size: .6em;
   line-height: 0;
   vertical-align: super;
   color: inherit;
-  transition: transform .2s ease;
-}
-a:hover:not(.chip) > .arr {
-  transform: translate(1px, -1px);
 }
 .chip > .arr {
   margin-left: 0;
@@ -70,7 +65,7 @@ a:hover:not(.chip) > .arr {
 .hero {
   max-width: 920px;
   margin: 0 auto;
-  padding: clamp(2.5rem, 6vw, 4rem) 1.4rem clamp(3rem, 7vw, 5rem);
+  padding: clamp(2.5rem, 6vw, 2.5rem) 1.4rem clamp(3rem, 7vw, 3rem);
 }
 .hero h1 {
   font-family: var(--serif);
