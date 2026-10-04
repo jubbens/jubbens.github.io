@@ -21,6 +21,21 @@
   --mono: ui-monospace, "SFMono-Regular", Menlo, Consolas, monospace;
 }
 
+@media (prefers-color-scheme: dark) {
+  :root {
+    color-scheme: dark;
+
+    --paper: #171816;
+    --paper-deep: #222421;
+    --ink: #f1f1ed;
+    --ink-soft: #c5c6bf;
+    --ink-faint: #969890;
+    --green: #79c7a1;
+    --green-bright: #9be0bc;
+    --line: #3a3d39;
+  }
+}
+
 * { box-sizing: border-box; }
 
 body {
@@ -140,7 +155,6 @@ section {
   padding-top: .3rem;
 }
 .exp-period {
-  font-family: var(--mono);
   font-size: .72rem;
   letter-spacing: .14em;
   color: var(--green);
